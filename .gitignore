@@ -3,3 +3,7 @@
 *.mp4
 *.jpeg
 *.mov
+*.svg
+
+
+.DS_store
