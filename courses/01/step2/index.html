@@ -92,10 +92,12 @@
                 </div>
             </div>
             <div class="course">
-                <div class="video">
-                    <video width="640" height="360" controls autoplay mute>
+                <div class="video-container">
+                    <button id="start-button" class="btn">Start</button>
+                    <video id="video-player" width="640" height="360" controls>
                         <source src="../../../assets/video/Coding/trin2.mp4" type="video/mp4">
                     </video>
+                    <div id="overlay-video"></div>
                 </div>
                 <div class="video-desc">
                     <p>Trin 2</p>

@@ -57,9 +57,9 @@ document.addEventListener('scroll', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    var startButton = document.getElementById('startButton');
-    var videoPlayer = document.getElementById('videoPlayer');
-    var overlay = document.getElementById('overlayVideo');
+    var startButton = document.getElementById('start-button');
+    var videoPlayer = document.getElementById('video-player');
+    var overlay = document.getElementById('overlay-video');
 
     // Show overlay initially
     overlay.style.display = 'block';

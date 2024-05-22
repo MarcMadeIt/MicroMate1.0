@@ -42,6 +42,7 @@ body {
     --text: #F9F4DA;
     --action: #FCBA28;
     --shadow: #131313;
+    --placeholder: #f9f4dab2;
     --theme1: #0BA95B;
     --theme2: #12B5E5;
     --theme3: #7B5EA7;
@@ -103,10 +104,31 @@ input {
     font-size: 16px;
 }
 
+textarea {
+    outline: none;
+    border: none;
+    background-color: black;
+    color: var(--text);
+    border: 2px solid var(--action);
+    padding: 15px 20px;
+    font-size: var(--font-text);
+    border-radius: var(--borderradius);
+    resize: none;
+    width: 300px;
+    height: 150px;
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    color: var(--text);
+}
+
+textarea::placeholder {
+    color: var(--placeholder);
+}
+
 button {
     border: none;
     outline: none;
-    cursor: url('../img/cursors/color-goldenrod-pointer.png') 2 2, auto;
+    cursor: url('../img/cursors/color-goldenrod-pointer.png') auto;
 }
 
 
@@ -141,13 +163,13 @@ button {
     font-weight: 600;
     letter-spacing: var(--letterspacing);
     transition: 400ms ease-in-out;
+    border: 3px solid var(--action);
 }
 
 .btn-light:hover {
     background-color: var(--background);
     color: var(--action);
     transition: 400ms ease-in-out;
-    outline: 3px solid var(--action);
 }
 
 .btn-outline {
@@ -191,26 +213,33 @@ button {
         padding: 10px 20px;
     }
 
+    .btn-light {
+        padding: 10px 20px;
+    }
+
     .btn-outline {
-        padding: 8px 18px;
+        padding: 10px 20px;
     }
 
 
 
 }
 
-/* Animations */
+/* Animations  */
 
-.fade-in {
-    opacity: 0;
-    transition: opacity 1.4s ease-out;
+@media screen and (min-width: 600px) {
+
+    .fade-in {
+        opacity: 0;
+        transition: opacity 1.4s ease-out;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+    }
 }
 
-.fade-in.visible {
-    opacity: 1;
-}
-
-/* HEADER --------------- HEADER */
+/* HEADER ---------------------------------------------------- HEADER */
 
 header {
     display: flex;
@@ -300,7 +329,8 @@ main {
 }
 
 .para-review-text p {
-    font-size: 12px;
+    font-size: 17px;
+    color: var(--placeholder);
 }
 
 .para-review-info span {
@@ -429,7 +459,7 @@ main {
     border-radius: var(--borderradius);
 }
 
-/*  TEASER ------------------- TEASER */
+/*  TEASER ----------------------------------------------------  TEASER */
 
 .teaser {
     background-image: url(../img/illustrations/ooorganize.svg);
@@ -451,9 +481,12 @@ main {
 
 .teaser-video {
     background-color: var(--shadow);
-    height: 420px;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
     border-radius: var(--borderradius);
-    width: 800px;
+    overflow: hidden;
 }
 
 .teaser-video video {
@@ -462,12 +495,7 @@ main {
     border-radius: 10px;
 }
 
-.video {
-    width: 100%;
-    height: 100%;
-}
-
-/*  REVIEW ------------------- REVIEW */
+/*  REVIEW ---------------------------------------------------- REVIEW */
 
 .review {
     display: flex;
@@ -555,7 +583,7 @@ main {
     object-fit: cover;
 }
 
-/* Footer ---------------- Footer */
+/* Footer ----------------------------------------------------  Footer */
 
 footer {
     width: 100%;
@@ -632,7 +660,7 @@ footer {
     font-size: 12px;
 }
 
-/* Course --------------- Course */
+/* Course ----------------------------------------------------  Course */
 
 .container {
     display: flex;
@@ -706,17 +734,15 @@ footer {
 }
 
 .course-btn {
-    display: flex;
-    gap: 15px;
     position: absolute;
     bottom: 0px;
     right: 50px;
 }
 
-.video {
-    width: 100%;
-    height: 100%;
+.btn-prev {
+    margin-right: 10px;
 }
+
 
 video {
     width: 100%;
@@ -724,12 +750,14 @@ video {
     border-radius: 10px;
 }
 
-#videoContainer {
+.video-container {
     position: relative;
+    width: 100%;
+    height: 100%;
 
 }
 
-#overlayVideo {
+#overlay-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -740,13 +768,13 @@ video {
     border-radius: 10px;
 }
 
-#videoPlayer {
+#video-player {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-#startButton {
+#start-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -771,21 +799,54 @@ video {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-
 }
 
-/* The Modal */
-.modal {
+.modal-final {
     position: relative;
-    margin: 5% auto;
+    margin: 10% auto;
     padding: 20px;
-    width: 80%;
-    height: 80%;
-    background-color: var(--background);
+    width: 85%;
+    height: 85%;
+    background-color: black;
+    background-image: url(../img/content/confetti_overlay2.png);
+    background-position: center;
+    background-size: contain;
+    border-radius: var(--borderradius);
 }
 
+.modal-final-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
 
+.txt-final {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 15px;
+}
 
+.form-final {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-final {
+    width: 300px;
+}
+
+.input-final::placeholder {
+    color: var(--placeholder);
+}
+
+.img-final {
+    width: 250px;
+    height: 100%;
+}
 
 @media screen and (max-width: 1175px) {
 
@@ -825,17 +886,13 @@ video {
 
 @media screen and (max-width: 980px) {
 
-
     /* TEASER */
 
-    .teaser {
-        height: 500px;
+    .teaser-video {
+        width: 100%;
+        ;
     }
 
-    .teaser-video {
-        height: 100%;
-        width: 100%;
-    }
 
     /* FOOTER */
     .footer-content {
@@ -872,8 +929,7 @@ video {
     main {
         padding: 15px;
         margin-top: 100px;
-
-        gap: 50px;
+        gap: 80px;
     }
 
     header {
@@ -882,7 +938,7 @@ video {
     }
 
     .logo {
-        height: 30px;
+        height: 35px;
     }
 
     .hero {
@@ -903,12 +959,22 @@ video {
         padding: 30px;
     }
 
+    .theme4,
+    .theme5,
+    .theme6 {
+        display: none;
+    }
+
     .card img {
         width: auto;
         height: 55px;
         position: absolute;
         right: 30px;
         bottom: 20px;
+    }
+
+    .time {
+        bottom: 50px;
     }
 
     .level {
@@ -921,6 +987,13 @@ video {
     .level span {
         width: 20px;
         height: 20px;
+    }
+
+    /* TEASER */
+
+    .teaser {
+        background-image: none;
+        height: 100%;
     }
 
     /* REVIEWS */
@@ -962,6 +1035,10 @@ video {
         height: 30px;
     }
 
+    .input-newsletter {
+        width: 180px;
+    }
+
 
     /* COURSE */
 
@@ -988,6 +1065,20 @@ video {
 
     #startButton {
         top: 47%;
+    }
+
+    /* FINAL */
+
+    .modal-final {
+        background-size: contain;
+        background-image: none;
+        margin: 5% auto;
+        width: 98%;
+        height: 98%;
+    }
+
+    .img-final {
+        width: 180px;
     }
 
 }

@@ -23,7 +23,7 @@
                 <h2>Begynder kodning</h2>
                 <hr class="line">
                 <div class="steps">
-                    <a href="../start/">
+                    <a href="../intro/">
                         <div class="step">
                             <div class="step-header">
                                 <div class="circle active">
@@ -92,17 +92,19 @@
                 </div>
             </div>
             <div class="course">
-                <div class="video">
-                    <video width="640" height="360" controls autoplay mute>
+                <div class="video-container">
+                    <button id="start-button" class="btn">Start</button>
+                    <video id="video-player" width="640" height="360" controls>
                         <source src="../../../assets/video/Coding/trin3.mp4" type="video/mp4">
                     </video>
+                    <div id="overlay-video"></div>
                 </div>
                 <div class="video-desc">
                     <p>Trin 4</p>
                 </div>
                 <div class="course-btn">
                     <a href="../step3/" class="btn-prev btn-outline">Tilbage</a>
-                    <a href="#" class="btn-next btn-light">Afslut kursus</a>
+                    <a href="#" id="course-final-btn" class="btn-next btn-light">Afslut kursus</a>
                 </div>
             </div>
         </div>
@@ -110,8 +112,25 @@
 
     </main>
 
-    <div class="overlay">
 
+    <div class="overlay-final" id="overlay-final">
+        <div class="modal-final">
+            <div class="modal-final-content">
+                <img class="img-final" src="../../../assets/img/maskot/confetti.png" alt="">
+                <div class="txt-final">
+                    <h2>Få dit kursus certifikat!</h2>
+                    <p>Tillykke du har nu færdiggjort <br> <span class="yellow">Begynder Kodning</span></p>
+                    <p>Lad os sende dit nye certifikat til dig</p>
+
+                </div>
+                <form action="" class="form-final">
+                    <input class="input-final" type="text" placeholder="Din mailadresse">
+                    <textarea class="textarea-final" placeholder="Skriv en anmeldelse af din oplevelse" name="" rows="2"
+                        cols="16"></textarea>
+                </form>
+                <button id="send-btn" class="btn-light">Forsæt</button>
+            </div>
+        </div>
     </div>
 
 
