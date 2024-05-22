@@ -109,6 +109,11 @@ button {
     cursor: url('../img/cursors/color-goldenrod-pointer.png') 2 2, auto;
 }
 
+.disable {
+    opacity: 30%;
+    cursor: not-allowed;
+}
+
 .btn {
     display: inline-block;
     padding: 15px 35px;
@@ -242,7 +247,6 @@ main {
     margin-top: 150px;
     gap: 200px;
     overflow: hidden;
-
 }
 
 .hero {
