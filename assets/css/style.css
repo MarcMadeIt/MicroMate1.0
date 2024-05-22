@@ -48,7 +48,7 @@ body {
     --theme4: #F38BA3;
     --theme5: #FC7428;
     --theme6: #ED203D;
-    --font-header1: 48px "Outfit", sans-serif;
+    --font-header1: 48px "Paytone One", sans-serif;
     --font-header2: 36px "Outfit", sans-serif;
     --font-header3: 25px "Outfit", sans-serif;
     --font-text: 16px;
@@ -109,10 +109,6 @@ button {
     cursor: url('../img/cursors/color-goldenrod-pointer.png') 2 2, auto;
 }
 
-.disable {
-    opacity: 30%;
-    cursor: not-allowed;
-}
 
 .btn {
     display: inline-block;
@@ -125,13 +121,13 @@ button {
     font-weight: 600;
     letter-spacing: var(--letterspacing);
     transition: 400ms ease-in-out;
+    border: 3px solid var(--action);
 }
 
 .btn:hover {
     background-color: var(--background);
     color: var(--action);
     transition: 400ms ease-in-out;
-    outline: 3px solid var(--action);
 }
 
 .btn-light {
@@ -688,6 +684,10 @@ footer {
     background-color: var(--action);
 }
 
+.disable {
+    opacity: 50%;
+}
+
 .line {
     width: 0px;
     height: 460px;
@@ -748,7 +748,7 @@ video {
 
 #startButton {
     position: absolute;
-    top: 47%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     outline: none;
@@ -984,6 +984,10 @@ video {
         width: 24px;
         height: 24px;
         border-width: 2px;
+    }
+
+    #startButton {
+        top: 47%;
     }
 
 }
