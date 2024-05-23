@@ -197,7 +197,6 @@ button {
     text-decoration: underline;
 }
 
-
 @media screen and (max-width: 600px) {
 
     body {
@@ -225,9 +224,6 @@ button {
     .btn-outline {
         padding: 10px 20px;
     }
-
-
-
 }
 
 /* Animations  */
@@ -274,7 +270,7 @@ main {
     flex-direction: column;
     width: 100%;
     padding: 50px;
-    margin-top: 150px;
+    margin-top: 100px;
     gap: 200px;
     overflow: hidden;
 }
@@ -762,6 +758,17 @@ video {
 
 }
 
+.play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--action);
+}
+
+.play-icon {
+    font-size: 100px;
+}
+
 #overlay-video {
     position: absolute;
     top: 0;
@@ -895,7 +902,6 @@ video {
 
     .teaser-video {
         width: 100%;
-        ;
     }
 
 
@@ -1066,6 +1072,10 @@ video {
         width: 24px;
         height: 24px;
         border-width: 2px;
+    }
+
+    .play-icon {
+        font-size: 70px;
     }
 
     #startButton {
