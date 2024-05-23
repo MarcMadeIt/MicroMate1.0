@@ -124,11 +124,12 @@
 
                 </div>
                 <form action="" class="form-final">
-                    <input class="input-final" type="text" placeholder="Din mailadresse" id="mail" name="email">
-                    <textarea class="textarea-final" placeholder="Skriv en anmeldelse af din oplevelse" id="message" name="message" rows="2"
-                        cols="16"></textarea>
+                    <input class="input-final" type="text" placeholder="Din mailadresse" id="email" name="email">
+                    <textarea class="textarea-final" placeholder="Skriv en anmeldelse af din oplevelse" id="message"
+                        name="message" rows="2" cols="16"></textarea>
                 </form>
-                <button id="send-btn" onclick="sendMail()" class="btn-light">Forsæt</button>
+                <a href="javascript:void(0);" id="send-btn" onclick="sendMail()" class="btn-light">Forsæt</a>
+                <span id="success-message"></span>
             </div>
         </div>
     </div>
@@ -137,14 +138,14 @@
 </body>
 <script src="../../../assets/js/script.js"></script>
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 <script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "sRxtwtZZKM268-rZQ",
-      });
-   })();
+    (function () {
+        emailjs.init({
+            publicKey: "sRxtwtZZKM268-rZQ",
+        });
+    })();
 </script>
+
 </html>
