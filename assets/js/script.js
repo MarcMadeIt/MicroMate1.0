@@ -105,3 +105,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+    // EmailJS
+    function sendMail(){
+        var info={
+            message:document.getElementById("message").value,
+            message:document.getElementById("email").value,
+        }
+    }
+    const serviceID="service_uj268gt";
+    const templateID="template_59c6yyd";
+
+    emailjs.send(serviceID,templateID,info).then(res=>{
+        document.getElementById("message").value="";
+        document.getElementById("email").value="";
+    }).catch((err)=>console.log(err));
