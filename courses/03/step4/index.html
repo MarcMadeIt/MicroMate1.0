@@ -102,19 +102,43 @@
                 </div>
                 <div class="course-btn">
                     <a href="../step3/" class="btn-prev btn-light">Tilbage</a>
-                    <a href="#" class="btn-next btn-outline ">Afslut kursus</a>
+                    <a href="#" id="course-final-btn" class="btn-next btn-light">Afslut kursus</a>
                 </div>
             </div>
         </div>
     </main>
 
-    <div class="overlay">
+    <div class="overlay-final" id="overlay-final">
+        <div class="modal-final">
+            <div class="modal-final-content">
+                <img class="img-final" src="../../../assets/img/maskot/confetti.png" alt="">
+                <div class="txt-final">
+                    <h2>Få dit kursus certifikat!</h2>
+                    <p>Tillykke du har nu færdiggjort <br> <span class="yellow">3D Art</span></p>
+                    <p>Lad os sende dit nye certifikat til dig</p>
 
+                </div>
+                <form action="" class="form-final">
+                    <input class="input-final" type="text" placeholder="Din mailadresse" id="email" name="email">
+                    <textarea class="textarea-final" placeholder="Skriv en anmeldelse af din oplevelse" id="message"
+                        name="message" rows="2" cols="16"></textarea>
+                </form>
+                <a href="javascript:void(0);" id="send-btn" onclick="sendMail()" class="btn-light">Forsæt</a>
+                <span id="success-message"></span>
+            </div>
+        </div>
     </div>
-
 
 </body>
 <script src="../../../assets/js/script.js"></script>
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init({
+            publicKey: "sRxtwtZZKM268-rZQ",
+        });
+    })();
+</script>
 </html>

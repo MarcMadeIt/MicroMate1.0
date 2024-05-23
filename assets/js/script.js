@@ -142,3 +142,20 @@ function sendMail() {
             document.getElementById("success-message").innerText = "Fejl ved afsendelse af certifikat.";
         });
 }
+
+
+function sendNewsletter() {
+    var params = {
+        newsletter: document.getElementById("newsletter").value,
+    };
+
+    emailjs.send("service_uj268gt", "template_7xz5xre", params)
+        .then(function (res) {
+            console.log("Email sent successfully:", res);
+            document.getElementById("newsletter-message").innerText = "Du er nu tilmeldt vores nyhedsbrev.";
+        })
+        .catch(function (error) {
+            console.error("Failed to send email:", error);
+            document.getElementById("newsletter-message").innerText = "Fejl ved tilmeldelse.";
+        });
+}

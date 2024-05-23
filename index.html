@@ -334,10 +334,11 @@
                 <p>+ 100 har allerede tilsluttet sig vores fællesskab</p>
                 <form action="">
                     <div class="form-grp">
-                        <input type="text" placeholder="Din mailadresse" class="input-newsletter">
-                        <a type="submit" class="btn-light">Tilmeld</a>
+                        <input type="text" placeholder="Din mailadresse" class="input-newsletter" id="newsletter" name="newsletter">
+                        <a type="submit" class="btn-light" onclick="sendNewsletter()">Tilmeld</a>
                     </div>
                 </form>
+                <span id="newsletter-message"></span>
             </div>
         </div>
         <div class="footer-credit">
@@ -350,5 +351,13 @@
 <script src="./assets/js/script.js"></script>
 
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init({
+            publicKey: "sRxtwtZZKM268-rZQ",
+        });
+    })();
+</script>
 </html>
