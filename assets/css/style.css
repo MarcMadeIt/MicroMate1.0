@@ -192,6 +192,11 @@ button {
     transition: 300ms ease-in-out;
 }
 
+.link {
+    color: var(--action);
+    text-decoration: underline;
+}
+
 
 @media screen and (max-width: 600px) {
 
