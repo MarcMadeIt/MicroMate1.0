@@ -808,10 +808,10 @@ video {
 
 .modal-final {
     position: relative;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 20px;
-    width: 85%;
-    height: 85%;
+    width: 90%;
+    height: 90%;
     background-color: black;
     background-image: url(../img/content/confetti_overlay2.png);
     background-position: center;
