@@ -153,6 +153,8 @@ function sendNewsletter() {
         .then(function (res) {
             console.log("Email sent successfully:", res);
             document.getElementById("newsletter-message").innerText = "Du er nu tilmeldt vores nyhedsbrev.";
+
+            document.getElementById("newsletter").value = "";
         })
         .catch(function (error) {
             console.error("Failed to send email:", error);

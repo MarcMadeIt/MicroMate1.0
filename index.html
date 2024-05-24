@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <img class="logo" src="./assets/img/logo.png" alt="">
+        <a href="#"><img class="logo" src="../assets/img/logo.png" alt=""></a>
         <a href="" class="btn-outline">Tilmeld</a>
     </header>
     <main>
@@ -177,15 +177,15 @@
                 <div class="teaser-video">
                     <video controls style="background-color: #0F0D0E;"
                         poster="./assets/img/content/thumbnail-video.png">
-                        <source src="./assets/video/illustrator/Intro1.mp4">
+                        <source src="./assets/video/teaser/teaserF2.mp4">
                     </video>
                 </div>
             </div>
         </section>
         <section class="review fade-in">
             <div class="review-block">
-                <h2>Frigør læringspotentiale, én mikro-kursus ad gangen</h2>
-                <h3>Microkursusplatform: Hvad giver det?</h3>
+                <h2>Udfold Dit Potentiale med Microkurser</h2>
+                <h3>Microkursusplatform: Din Nøgle til Fleksibel og Gratis Læring</h3>
                 <ul>
                     <li>
                         <img src="./assets/img/content/hands/pointer2.png" alt="">
@@ -305,8 +305,10 @@
                 </div>
             </div>
         </section>
-        <section class="teaser">
-
+        <section class="quote fade-in">
+            <div class="quote-image">
+                <img src="./assets/img/content/quote.png" alt="">
+            </div>
         </section>
     </main>
 
@@ -315,10 +317,9 @@
 
             <div class="footer-info">
                 <ul>
-                    <li><a href="">Om os</a></li>
-                    <li><a href="">Regler & vilkår</a></li>
+                    <li><a href="./about/">Om os</a></li>
+                    <li><a href="./tearms/">Regler & vilkår</a></li>
                     <li><a href="">Anmeldelser</a></li>
-                    <li><a href="https://overapi.com/">Cheatsheets</a></li>
                 </ul>
                 <ul>
                     <li><a href="./courses/01/intro/">Begynder kodning</a></li>
@@ -334,7 +335,8 @@
                 <p>+ 100 har allerede tilsluttet sig vores fællesskab</p>
                 <form action="">
                     <div class="form-grp">
-                        <input type="text" placeholder="Din mailadresse" class="input-newsletter" id="newsletter" name="newsletter">
+                        <input type="text" placeholder="Din mailadresse" class="input-newsletter" id="newsletter"
+                            name="newsletter">
                         <a type="submit" class="btn-light" onclick="sendNewsletter()">Tilmeld</a>
                     </div>
                 </form>
@@ -360,4 +362,5 @@
         });
     })();
 </script>
+
 </html>

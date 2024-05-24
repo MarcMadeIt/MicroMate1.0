@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroMate - Om os</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="/"><img class="logo" src="../assets/img/logo.png" alt=""></a>
+        <a href="" class="btn-outline">Tilmeld</a>
+    </header>
+    <main>
+        <section class="about">
+            <div class="about-txt">
+
+                <h1>Om os</h1>
+                <p>Velkommen til MicroMate - din destination for mikrokurser inden for begynder kodning, Illustrator og
+                    3D i
+                    Blender! Hos MicroMate tror vi på at gøre læring tilgængelig og effektiv ved at tilbyde kurser, der
+                    er
+                    skræddersyet til travle livsstilarter.</p>
+                <p>Vi forstår, at tiden er en knap ressource, og det er derfor, vi har skabt mikrokurserne - korte,
+                    koncise
+                    og kraftfulde lektioner, der giver dig den nøjagtige viden, du har brug for, uden at spilde din
+                    dyrebare
+                    tid. Vores mål er at gøre læring sjovt, fleksibelt og mest af alt, effektivt.
+                    Uanset om du drømmer om at mestre de grundlæggende i kodning, fordybe dig i kunst af illustration
+                    eller
+                    udforske de dybder af 3D-design i Blender, har vi kurser, der passer til dine behov. Vores erfarne
+                    instruktører guider dig trin for trin gennem hver lektion, så du kan opbygge dine færdigheder på din
+                    egen tidsplan og i dit eget tempo.</p>
+                <p>Vores kursusindhold er omhyggeligt sammensat for at sikre, at du får den mest relevante og opdaterede
+                    viden inden for hvert emne. Vi tror på hands-on læring, så vores kurser er fyldt med praktiske
+                    øvelser og projekter, der giver dig mulighed for at anvende det, du har lært i virkelige scenarier.
+                </p>
+
+                <span class="yellow">Tilmeld dig i dag, og lad os sammen skabe fremtiden med læring, der passer til dig.
+                    Velkommen til
+                    MicroMate - hvor små skridt fører til store resultater!</span>
+
+            </div>
+            <div class="about-profiles">
+                <h2>Intruktører</h2>
+                <div class="profiles">
+                    <div class="profile">
+                        <img src="../assets/img/content/profiles/Me.png" alt="">
+                        <h3>Mikkel Toft</h3>
+                        <p>Figma, Blender & InDesign</p>
+                    </div>
+                    <div class="profile">
+                        <img src="../assets/img/content/profiles/ras.png" alt="">
+                        <h3>Rasmus Jørgensen</h3>
+                        <p>Illustrator, PhotoShop & Primiere Pro</p>
+                    </div>
+                    <div class="profile">
+                        <img src="../assets/img/content/profiles/marc.jpg" alt="">
+                        <h3>Marc Møller</h3>
+                        <p>HTML, CSS & JavaScript</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-info">
+                <ul>
+                    <li><a href="#">Om os</a></li>
+                    <li><a href="../tearms/">Regler & vilkår</a></li>
+                    <li><a href="">Anmeldelser</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./courses/01/intro/">Begynder kodning</a></li>
+                    <li><a href="./courses/02/intro/">Start 3D art</a></li>
+                    <li><a href="./courses/03/intro/">Kreativ illustration</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <div class="footer-newsletter-title">
+                    <h3>Få et cool nyhedsbrev</h3>
+                    <img src="./assets/img/content/hands/ok3.png" alt="">
+                </div>
+                <p>+ 100 har allerede tilsluttet sig vores fællesskab</p>
+                <form action="">
+                    <div class="form-grp">
+                        <input type="text" placeholder="Din mailadresse" class="input-newsletter" id="newsletter"
+                            name="newsletter">
+                        <a type="submit" class="btn-light" onclick="sendNewsletter()">Tilmeld</a>
+                    </div>
+                </form>
+                <span id="newsletter-message"></span>
+            </div>
+        </div>
+        <div class="footer-credit">
+            <span> 2024 &#169; Alle rettigheder forbeholdt</span>
+        </div>
+    </footer>
+
+
+</body>
+<script src="../assets/js/script.js"></script>
+
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init({
+            publicKey: "sRxtwtZZKM268-rZQ",
+        });
+    })();
+</script>
+
+</html>

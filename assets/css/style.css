@@ -97,7 +97,7 @@ input {
     border: none;
     background-color: transparent;
     color: var(--text);
-    border: 2px solid var(--action);
+    border: 3px solid var(--action);
     padding: 15px 20px;
     font-size: var(--font-text);
     border-radius: var(--borderradius);
@@ -109,7 +109,7 @@ textarea {
     border: none;
     background-color: var(--background);
     color: var(--text);
-    border: 2px solid var(--action);
+    border: 3px solid var(--action);
     padding: 15px 20px;
     font-size: var(--font-text);
     border-radius: var(--borderradius);
@@ -271,7 +271,7 @@ main {
     width: 100%;
     padding: 50px;
     margin-top: 100px;
-    gap: 200px;
+    gap: 150px;
     overflow: hidden;
 }
 
@@ -496,6 +496,13 @@ main {
     border-radius: 10px;
 }
 
+.quote-image {}
+
+.quote-image img {
+    height: 100%;
+    width: 750px;
+}
+
 /*  REVIEW ---------------------------------------------------- REVIEW */
 
 .review {
@@ -584,11 +591,98 @@ main {
     object-fit: cover;
 }
 
+/* About ----------------------------------------------------  About */
+
+.about {
+    display: flex;
+    max-width: 1000px;
+    flex-direction: column;
+    gap: 60px;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.about-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-profiles {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.profile img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 3px solid var(--action);
+}
+
+/* TEARMS ----------------------------------------------------  TEARMS */
+
+.tearms {
+    display: flex;
+    max-width: 1000px;
+    flex-direction: column;
+    gap: 60px;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.tearms-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tearms-txts {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.tearms-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tearms-txt ul {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tearms-txt li {
+    list-style: disc;
+}
+
 /* Footer ----------------------------------------------------  Footer */
 
 footer {
     width: 100%;
     padding: 0 30px;
+    margin-top: 100px;
 }
 
 .footer-content {
@@ -625,6 +719,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     gap: 30px;
+    position: relative;
 }
 
 .footer-newsletter-title {
@@ -642,6 +737,12 @@ footer {
     flex-direction: column;
     gap: 15px;
     border-radius: var(--borderradius);
+}
+
+#newsletter-message {
+    position: absolute;
+    bottom: 30px;
+    font-size: 13px;
 }
 
 .form-grp {
@@ -736,8 +837,8 @@ footer {
 
 .course-btn {
     position: absolute;
-    bottom: 0px;
-    right: 50px;
+    bottom: -50px;
+    right: 0px;
 }
 
 .btn-prev {
@@ -815,10 +916,10 @@ video {
 
 .modal-final {
     position: relative;
-    margin: 5% auto;
-    padding: 50px;
-    width: 90%;
-    height: 90%;
+    margin: 2% auto;
+    padding: 30px;
+    width: 95%;
+    height: 95%;
     background-color: var(--background);
     background-image: url(../img/content/confetti_overlay2.png);
     background-position: center;
@@ -876,12 +977,7 @@ video {
     }
 
     .review-books {
-        position: absolute;
-        right: 30px;
-        top: 30px;
-        bottom: auto;
-        width: 60px;
-        height: 60px;
+        display: none;
     }
 
     .review-block {
@@ -913,6 +1009,13 @@ video {
         padding: 50px;
     }
 
+    /* ABOUT */
+
+    .profiles {
+        flex-direction: column;
+        gap: 60px;
+    }
+
     /* COURSE */
 
     .container {
@@ -933,6 +1036,9 @@ video {
 
 
 @media screen and (max-width: 600px) {
+
+
+
     body {
         min-height: 100svh;
     }
@@ -943,6 +1049,9 @@ video {
         gap: 80px;
     }
 
+
+    /* HOMEPAGE - HEADER */
+
     header {
         height: 80px;
         padding: 0px 20px;
@@ -952,6 +1061,8 @@ video {
         height: 35px;
     }
 
+    /* HOMEPAGE - HERO */
+
     .hero {
         width: 300px;
     }
@@ -959,6 +1070,8 @@ video {
     .hero img {
         height: 180px;
     }
+
+    /* HOMEPAGE - CARDS */
 
     .cards {
         gap: 30px;
@@ -978,7 +1091,7 @@ video {
 
     .card img {
         width: auto;
-        height: 55px;
+        height: 70px;
         position: absolute;
         right: 30px;
         bottom: 20px;
@@ -1000,11 +1113,29 @@ video {
         height: 20px;
     }
 
-    /* TEASER */
+    /* HOMEPAGE - TEASER */
 
     .teaser {
         background-image: none;
         height: 100%;
+    }
+
+    /* HOMEPAGE - QUOTE */
+
+    .quote-image img {
+        width: 100%;
+    }
+
+    /* ABOUT */
+
+    .about {
+        padding: 15px;
+    }
+
+    /* TEARMS */
+
+    .tearms {
+        padding: 15px;
     }
 
     /* REVIEWS */
@@ -1016,6 +1147,8 @@ video {
 
     .review {
         height: 600px;
+        overflow: hidden;
+        width: 100vw;
     }
 
     .review-cards {
@@ -1048,6 +1181,11 @@ video {
 
     .input-newsletter {
         width: 180px;
+    }
+
+    #newsletter-message {
+        bottom: -30px;
+        font-size: 12px;
     }
 
 
