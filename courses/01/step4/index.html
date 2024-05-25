@@ -31,7 +31,7 @@
                                 <h3>Intro</h3>
                             </div>
                             <div class="step-content">
-                                <p>Præsentation af VS Code og hvad er kodning?</p>
+                                <p>VS Code og hvad er kodning?</p>
                             </div>
                         </div>
                     </a>
@@ -43,7 +43,7 @@
                                 <h3>Trin 1</h3>
                             </div>
                             <div class="step-content">
-                                <p>Mappestruktur + De første kodelinjer</p>
+                                <p>Mappestruktur og de første linjer</p>
                             </div>
                         </div>
                     </a>
@@ -55,7 +55,7 @@
                                 <h3>Trin 2</h3>
                             </div>
                             <div class="step-content">
-                                <p>Live server + Styling</p>
+                                <p>Live server og start på styling</p>
                             </div>
                         </div>
                     </a>
@@ -67,7 +67,7 @@
                                 <h3>Trin 3</h3>
                             </div>
                             <div class="step-content">
-                                <p>Tilføj "ClassName" + Nye komponenter</p>
+                                <p>Navngive tags og nye komponenter</p>
                             </div>
                         </div>
                     </a>
@@ -79,7 +79,7 @@
                                 <h3>Trin 4</h3>
                             </div>
                             <div class="step-content">
-                                <p>Projekt + Brug af det lærte</p>
+                                <p>Mikro Projekt - Hover effekt</p>
                             </div>
                         </div>
                     </a>
@@ -87,14 +87,19 @@
             </div>
             <div class="course">
                 <div class="video-container">
-                    <button id="start-button" class="btn">Start</button>
+                    <a id="start-button" class="play"><iconify-icon icon="material-symbols:play-circle-rounded"
+                            class="play-icon" style="color: #FCBA28"></iconify-icon>
+                    </a>
                     <video id="video-player" width="640" height="360" controls>
                         <source src="../../../assets/video/Coding/trin4.mp4" type="video/mp4">
                     </video>
                     <div id="overlay-video"></div>
                 </div>
                 <div class="video-desc">
-                    <p>Trin 4</p>
+                    <p>Kursuset sidste trin byder på et micro projekt hvor vi laver en <a target="_blank" class="link"
+                            href="https://www.w3schools.com/css/css3_buttons.asp#:~:text=Try%20it%20Yourself%20%C2%BB-,Hoverable%20Buttons,-Green">knap
+                            med hover effekt</a>, viser hvilke
+                        kreative løsninger man kan med CSS.</p>
                 </div>
                 <div class="course-btn">
                     <a href="../step3/" class="btn-prev btn-outline">Tilbage</a>
@@ -110,19 +115,20 @@
     <div class="overlay-final" id="overlay-final">
         <div class="modal-final">
             <div class="modal-final-content">
+                <a href="/" class="final-close"><iconify-icon icon="material-symbols:close-rounded" width="50"
+                        height="50" style="color: #FCBA28"></iconify-icon></a>
                 <img class="img-final" src="../../../assets/img/maskot/confetti.png" alt="">
                 <div class="txt-final">
                     <h2>Få dit kursus certifikat!</h2>
                     <p>Tillykke du har nu færdiggjort <br> <span class="yellow">Begynder Kodning</span></p>
                     <p>Lad os sende dit nye certifikat til dig</p>
-
                 </div>
                 <form action="" class="form-final">
                     <input class="input-final" type="text" placeholder="Din mailadresse" id="email" name="email">
                     <textarea class="textarea-final" placeholder="Skriv en anmeldelse af din oplevelse" id="message"
                         name="message" rows="2" cols="16"></textarea>
                 </form>
-                <a href="javascript:void(0);" id="send-btn" onclick="sendMail()" class="btn-light">Forsæt</a>
+                <a href="javascript:void(0);" id="send-btn" onclick="sendMail()" class="btn-light">Bekræft</a>
                 <span id="success-message"></span>
             </div>
         </div>

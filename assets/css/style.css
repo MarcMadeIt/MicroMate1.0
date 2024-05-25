@@ -219,9 +219,14 @@ button {
 
     .btn-light {
         padding: 10px 20px;
+
     }
 
     .btn-outline {
+        padding: 10px 20px;
+    }
+
+    input {
         padding: 10px 20px;
     }
 }
@@ -485,7 +490,7 @@ main {
     height: auto;
     width: 100%;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 855px;
     border-radius: var(--borderradius);
     overflow: hidden;
 }
@@ -496,9 +501,13 @@ main {
     border-radius: 10px;
 }
 
-.quote-image img {
+.quote-img {
     height: 100%;
     width: 750px;
+}
+
+.quote-img-mobile {
+    display: none;
 }
 
 /*  REVIEW ---------------------------------------------------- REVIEW */
@@ -541,10 +550,10 @@ main {
 
 .review-books {
     position: absolute;
-    right: 100px;
+    right: 80px;
     bottom: 50px;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
 }
 
 .review-block li {
@@ -899,8 +908,6 @@ video {
 
 /* Course Done - Overlay */
 
-
-/* The Overlay */
 .overlay-final {
     display: none;
     position: fixed;
@@ -938,6 +945,12 @@ video {
     text-align: center;
     flex-direction: column;
     gap: 15px;
+}
+
+.final-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .form-final {
@@ -987,6 +1000,13 @@ video {
         bottom: 0;
     }
 
+    .course {
+        width: 60%;
+    }
+
+    .timeline {
+        width: 40%;
+    }
 
 }
 
@@ -1043,10 +1063,9 @@ video {
 
     main {
         padding: 15px;
-        margin-top: 100px;
-        gap: 80px;
+        margin-top: 120px;
+        gap: 100px;
     }
-
 
     /* HOMEPAGE - HEADER */
 
@@ -1113,6 +1132,10 @@ video {
 
     /* HOMEPAGE - TEASER */
 
+    .teaser-content {
+        gap: 15px;
+    }
+
     .teaser {
         background-image: none;
         height: 100%;
@@ -1120,9 +1143,16 @@ video {
 
     /* HOMEPAGE - QUOTE */
 
-    .quote-image img {
-        width: 100%;
+    .quote-img {
+        display: none;
     }
+
+    .quote-img-mobile {
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
 
     /* ABOUT */
 
@@ -1214,22 +1244,34 @@ video {
         font-size: 70px;
     }
 
+    .course-btn {
+        position: absolute;
+        bottom: 15px;
+        right: 30px;
+    }
+
     #startButton {
         top: 47%;
     }
+
+
 
     /* FINAL */
 
     .modal-final {
         background-size: contain;
         background-image: none;
-        margin: 5% auto;
-        width: 98%;
-        height: 98%;
+        margin: auto;
+        width: 100%;
+        height: 100%;
     }
 
     .img-final {
         width: 180px;
+    }
+
+    .form-final {
+        gap: 15px;
     }
 
 }
