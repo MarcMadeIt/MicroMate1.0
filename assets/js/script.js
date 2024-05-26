@@ -83,9 +83,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const windowHeight = window.innerHeight;
 
     document.addEventListener('scroll', function () {
+        // For hver 'fade' element, tilføjes klassen 'visible' når elementet er 100px indenfor synsvidde
         fadeElements.forEach(function (element) {
             const elementTop = element.getBoundingClientRect().top;
-            if (elementTop < windowHeight - 100) { // Adjust 100 to control the trigger point
+            if (elementTop < windowHeight - 100) { // 100 px før elementets top
                 element.classList.add('visible');
             }
         });
@@ -95,20 +96,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
         paraReviews.forEach(function (review, index) {
             var speed = 0.5;
-            var translateX = Math.min(scrollPosition * speed, maxTranslateX); // Limit maximum translation
-            var opacity = 1 - Math.abs(scrollPosition * 0.003); // Adjust opacity based on scroll position
+            var translateX = Math.min(scrollPosition * speed, maxTranslateX);
+            var opacity = 1 - Math.abs(scrollPosition * 0.003);
             var rotate = initialRotate[index] + (scrollPosition * 0.06);
 
-            if (index === 2 || index === 3) {
+            if (index === 2 || index === 3) { // Skift rotation og translation retning for specifikke elementer
                 rotate *= -1;
                 translateX = -translateX;
             }
 
             review.style.transform = 'translateX(' + translateX + 'px) rotate(' + rotate + 'deg)';
-            review.style.opacity = opacity; // Apply opacity
+            review.style.opacity = opacity;
         });
 
-        // My component translation
+        // Translation af Review cards
         var myComponent = document.getElementById('myComponent');
         if (myComponent) {
             var speed = 0.1;
@@ -116,6 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
             myComponent.style.transform = 'translateX(' + translateX + 'px)';
         }
     });
+
+
 });
 
 // EmailJS
@@ -133,9 +136,8 @@ function sendMail() {
             // Add a delay before hiding the overlay or redirecting
             setTimeout(function () {
                 document.getElementById("overlay-final").style.display = 'none';
-                // Redirect or any other action here
-                window.location.href = "/"; // Change to your homepage URL
-            }, 3000); // Delay in milliseconds (3000ms = 3 seconds)
+                window.location.href = "/"; // Skifter til forsiden. 
+            }, 3000);
         })
         .catch(function (error) {
             console.error("Failed to send email:", error);
