@@ -402,6 +402,7 @@ main {
     gap: 15px;
     position: relative;
     transition: 300ms ease;
+    border-radius: var(--borderradius);
 }
 
 .card img {
@@ -441,32 +442,26 @@ main {
 
 .theme1 {
     background-color: var(--theme1);
-    border-radius: var(--borderradius);
 }
 
 .theme2 {
     background-color: var(--theme2);
-    border-radius: var(--borderradius);
 }
 
 .theme3 {
     background-color: var(--theme3);
-    border-radius: var(--borderradius);
 }
 
 .theme4 {
     background-color: var(--theme4);
-    border-radius: var(--borderradius);
 }
 
 .theme5 {
     background-color: var(--theme5);
-    border-radius: var(--borderradius);
 }
 
 .theme6 {
     background-color: var(--theme6);
-    border-radius: var(--borderradius);
 }
 
 /*  Homepage - Teaser -----------------------  Homepage - Teaser */
@@ -568,6 +563,7 @@ main {
 .review-cards {
     display: flex;
     translate: -250px;
+
 }
 
 .review-card {
@@ -580,6 +576,7 @@ main {
     box-shadow: var(--background) 5px 5px 0px 3px;
     border-radius: var(--borderradius);
 }
+
 
 .rotate-right {
     rotate: 4.5deg;
@@ -1031,6 +1028,7 @@ footer {
     .review-cards {
         position: absolute;
         bottom: 0;
+
     }
 
     .course {
@@ -1044,6 +1042,12 @@ footer {
 }
 
 @media screen and (max-width: 980px) {
+
+
+    main {
+        margin-top: 130px;
+        padding: 30px;
+    }
 
     /* TEASER */
 
@@ -1084,6 +1088,15 @@ footer {
 
 }
 
+@media screen and (max-width: 750px) {
+
+
+    .review-cards {
+        bottom: -100px;
+
+    }
+}
+
 
 
 @media screen and (max-width: 600px) {
@@ -1096,7 +1109,6 @@ footer {
 
     main {
         padding: 15px;
-        margin-top: 130px;
         gap: 100px;
     }
 
@@ -1199,13 +1211,12 @@ footer {
     }
 
     .review-cards {
-        bottom: 30px;
+        bottom: 50px;
     }
 
     .review-card {
         padding: 20px;
         width: 300px;
-
     }
 
     .review-card p {
@@ -1323,6 +1334,12 @@ footer {
 
 }
 
+@media screen and (max-width: 400px) {
+    .review-cards {
+        bottom: 30px;
+    }
+}
+
 
 
 @media screen and (min-width: 800px) {
@@ -1331,6 +1348,7 @@ footer {
     .card.theme1:hover {
         box-shadow: 0px 0px 10px 1px var(--theme1);
         transition: 300ms ease;
+        background-color: transparent;
     }
 
     .card.theme2:hover {
