@@ -1049,6 +1049,10 @@ footer {
         padding: 30px;
     }
 
+    .logo {
+        height: 45px;
+    }
+
     /* TEASER */
 
     .teaser-video {
@@ -1084,6 +1088,12 @@ footer {
 
     .course {
         width: 100%;
+    }
+
+    .course-btn {
+        position: absolute;
+        bottom: 15px;
+        right: 30px;
     }
 
 }
@@ -1276,11 +1286,6 @@ footer {
         font-size: 70px;
     }
 
-    .course-btn {
-        position: absolute;
-        bottom: 15px;
-        right: 30px;
-    }
 
     #startButton {
         top: 47%;
@@ -1348,7 +1353,6 @@ footer {
     .card.theme1:hover {
         box-shadow: 0px 0px 10px 1px var(--theme1);
         transition: 300ms ease;
-        background-color: transparent;
     }
 
     .card.theme2:hover {
