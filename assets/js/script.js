@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Handle overlay for "Afslut kursus"
     var overlayFinal = document.getElementById("overlay-final");
@@ -78,6 +80,16 @@ document.addEventListener('DOMContentLoaded', function () {
         initialRotate.push(parseFloat(style.transform.split('rotate(')[1]) || 15);
     });
 
+
+
+
+
+
+
+
+    // Hjælp til logikken bag parallax effekt scroll = translate + rotate + fade 
+    // Link til chatgpt tråd https://chatgpt.com/c/922a6164-ebbf-4c6a-a64a-dcb2e024cb5a
+
     // Handle fade-in elements on scroll
     const fadeElements = document.querySelectorAll('.fade-in');
     const windowHeight = window.innerHeight;
@@ -121,6 +133,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+
+
+
+
+
+
+
+
 // EmailJS
 function sendMail() {
     var params = {
@@ -133,7 +153,6 @@ function sendMail() {
             console.log("Email sent successfully:", res);
             document.getElementById("success-message").innerText = "Certifikatet er sendt!";
 
-            // Add a delay before hiding the overlay or redirecting
             setTimeout(function () {
                 document.getElementById("overlay-final").style.display = 'none';
                 window.location.href = "/"; // Skifter til forsiden. 
