@@ -104,13 +104,18 @@ input {
     font-size: 16px;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 60px #0F0D0E inset !important;
+    -webkit-text-fill-color: var(--text) !important;
+}
+
 textarea {
     outline: none;
     border: none;
     background-color: var(--background);
     color: var(--text);
     border: 3px solid var(--action);
-    padding: 15px 20px;
+    padding: 20px;
     font-size: var(--font-text);
     border-radius: var(--borderradius);
     resize: none;
