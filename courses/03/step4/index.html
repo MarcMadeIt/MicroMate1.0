@@ -93,9 +93,16 @@
             </div>
             <div class="course">
                 <div class="video-container">
-                    <video width="640" height="360" controls autoplay mute>
+                    <a id="start-button" class="play"><iconify-icon icon="material-symbols:play-circle-rounded"
+                            class="play-icon" style="color: #FCBA28"></iconify-icon>
+                        <h3>Start trin 4</h3>
+                    </a>
+                    <video id="video-player" width="640" height="360"
+                        poster="../../../assets/img/content/thumbnail-video-course.png"
+                        style="background-color:#070707;" controls>
                         <source src="../../../assets/video/3D/Video1.5-3D.mp4" type="video/mp4">
                     </video>
+                    <div id="overlay-video"></div>
                 </div>
                 <div class="video-desc">
                     <p>I denne video laver vi en terning i blender, ved at bruge noget nyt, samt noget fra de forrige
