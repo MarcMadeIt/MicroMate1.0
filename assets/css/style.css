@@ -829,7 +829,7 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0f0d0eb6;
+    background-color: #0f0d0ed1;
     display: none;
     border-radius: 10px;
 }
@@ -1068,7 +1068,6 @@ footer {
         width: 100%;
     }
 
-
     /* FOOTER */
     .footer-content {
         flex-direction: column-reverse;
@@ -1131,8 +1130,10 @@ footer {
     main {
         padding: 15px;
         gap: 100px;
+        margin-top: 0px;
     }
 
+    d
     /* HOMEPAGE - HEADER */
 
     header {
@@ -1294,12 +1295,13 @@ footer {
     }
 
     .play-icon {
-        font-size: 70px;
+        font-size: 85px;
     }
 
 
-    #startButton {
-        top: 47%;
+    #start-button {
+        position: absolute;
+        top: 48.5%;
     }
 
     /* FINAL */
