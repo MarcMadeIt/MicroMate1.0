@@ -550,10 +550,10 @@ main {
 
 .review-books {
     position: absolute;
-    right: 80px;
-    bottom: 50px;
-    width: 130px;
-    height: 130px;
+    right: 150px;
+    top: 70px;
+    width: 80px;
+    height: 80px;
 }
 
 .review-block li {
@@ -1299,7 +1299,7 @@ footer {
     }
 
     #start-button {
-        top: 46%;
+        top: 42.5%;
     }
 
 
