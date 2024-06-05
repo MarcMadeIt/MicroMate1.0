@@ -15,8 +15,32 @@
 <body>
     <header>
         <a href="#"><img class="logo" src="../assets/img/logo.png" alt=""></a>
-        <a href="" class="btn-outline">Tilmeld</a>
+        <a href="#" id="openOverlay" class="btn-outline">Tilmeld</a>
     </header>
+    <div id="overlay-register" class="overlay-register">
+        <div class="overlay-content">
+            <a href="/" class="close-btn"><iconify-icon icon="material-symbols:close-rounded" width="50" height="50"
+                    style="color: #FCBA28"></iconify-icon></a>
+            <form id="form-register" class="form-register">
+                <h2>Tilmelding</h2>
+                <p>Opret dig og få ekstra fordele</p>
+                <input type="text" id="name" name="name" placeholder="Dit navn" required>
+                <input type="email" id="email" name="email" placeholder="Mailadresse" required>
+                <input type="phone" id="phone" name="phone" placeholder="Mobilnummer" required>
+                <div class="socials-login">
+                    <div class="social-login">
+                        <iconify-icon icon="mdi:facebook" width="30" height="30" style="color: #FCBA28"></iconify-icon>
+                        <p>Facebook</p>
+                    </div>
+                    <div class="social-login">
+                        <iconify-icon icon="mdi:google" width="30" height="30" style="color: #FCBA28"></iconify-icon>
+                        <p>Google</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-light" type="submit">Tilmeld</a>
+            </form>
+        </div>
+    </div>
     <main class="homepage">
         <section class="hero">
             <div class="hero-content">
@@ -56,7 +80,7 @@
                 </div>
                 <div class="para-review-info">
                     <div class="para-review-img">
-                        <img src="./assets/img/reviews/profiles/Person2.jpeg" alt="Profil billede">
+                        <img src="./assets/img/reviews/profiles/person2.png" alt="Profil billede">
                     </div>
                     <span>Laura, IT-Studerende </span>
                 </div>
@@ -68,7 +92,7 @@
                 </div>
                 <div class="para-review-info">
                     <div class="para-review-img">
-                        <img src="./assets/img/reviews/profiles/Person3.jpeg" alt="Profil billede">
+                        <img src="./assets/img/reviews/profiles/person3.png" alt="Profil billede">
                     </div>
                     <span>Louise, Illustrationsstuderende</span>
                 </div>
@@ -188,7 +212,7 @@
         <section class="review-section fade-in">
             <div class="review-block">
                 <h2>Udfold dit fulde potentiale! </h2>
-                <h3>Microkursus: Din nøgle til fleksibel og gratis læring</h3>
+                <h3>Mikrokursus: Din nøgle til fleksibel og gratis læring</h3>
                 <ul>
                     <li>
                         <img src="./assets/img/content/hands/pointer2.png" alt="Maskottens hånd peger">
@@ -231,7 +255,7 @@
                 </div>
                 <div class="review-card theme2 rotate-right" style="z-index: 8;">
                     <div class=" review-card-top">
-                        <img src="./assets/img/reviews/profiles/person9.jpeg" alt="profil billede">
+                        <img src="./assets/img/reviews/profiles/Person9.jpeg" alt="profil billede">
                         <div>
                             <h3>Sofia Jensen</h3>
                             <p>Spiludviklerstuderende</p>
@@ -343,7 +367,7 @@
                 <form action="">
                     <div class="form-grp">
                         <input type="text" placeholder="Din mailadresse" class="input-newsletter" id="newsletter"
-                            name="newsletter">
+                            name="newsletter" required>
                         <a type="submit" class="btn-light" onclick="sendNewsletter()">Tilmeld</a>
                     </div>
                 </form>

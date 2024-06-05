@@ -1,9 +1,7 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Handle overlay for "Afslut kursus"
-    var overlayFinal = document.getElementById("overlay-final");
-    var courseFinalBtn = document.getElementById("course-final-btn");
+    // Overlay og Modal
+    var overlayFinal = document.getElementById("overlay-final", "overlay");
+    var courseFinalBtn = document.getElementById("course-final-btn", "register");
     var homeLink = document.getElementById("home-link");
     var videoPlayer = document.querySelector("video");
 
@@ -18,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             if (videoPlayer) {
                 videoPlayer.pause();
-                videoPlayer.currentTime = 0; // Reset video to start
+                videoPlayer.currentTime = 0; /// Reset video til starten
             }
         }
     }
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (overlayFinal) {
                 overlayFinal.style.display = "none";
             }
-            // Assuming the link will navigate away, so no need to reset the video here
         }
     }
 
@@ -39,12 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             if (videoPlayer) {
                 videoPlayer.pause();
-                videoPlayer.currentTime = 0; // Reset video to start
+                videoPlayer.currentTime = 0; // Reset video til starten
             }
         }
     }
 
-    // Handle video overlay and start button
+
     var startButton = document.getElementById('start-button');
     var videoPlayer2 = document.getElementById('video-player');
     var overlayVideo = document.getElementById('overlay-video');
@@ -65,27 +62,20 @@ document.addEventListener('DOMContentLoaded', function () {
         startButton.addEventListener('click', function () {
             if (videoPlayer2) {
                 videoPlayer2.play();
-                startButton.style.display = 'none'; // Hide the button
+                startButton.style.display = 'none';
             }
         });
     }
 
-    // Handle parallax reviews
+    // Parallax Effekt anmeldelse i hero
     var paraReviews = document.querySelectorAll('.para-review');
     var initialRotate = [];
-    var maxTranslateX = 250; // Adjust as needed
+    var maxTranslateX = 250;
 
     paraReviews.forEach(function (review) {
         var style = window.getComputedStyle(review);
         initialRotate.push(parseFloat(style.transform.split('rotate(')[1]) || 15);
     });
-
-
-
-
-
-
-
 
     // Hjælp til logikken bag parallax effekt scroll = translate + rotate + fade 
     // Link til chatgpt tråd https://chatgpt.com/c/922a6164-ebbf-4c6a-a64a-dcb2e024cb5a
@@ -103,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Parallax effect
+        // Parallax Effekt til anmeldelser farver
         var scrollPosition = window.scrollY;
 
         paraReviews.forEach(function (review, index) {
@@ -130,8 +120,36 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Tilføj din overlay form logik her
+    var openOverlayBtn = document.getElementById('openOverlay');
+    var closeOverlayBtn = document.getElementById('closeOverlay');
+    var overlayRegister = document.getElementById('overlay-register');
 
+    if (openOverlayBtn) {
+        openOverlayBtn.addEventListener('click', function () {
+            if (overlayRegister) {
+                overlayRegister.style.display = 'flex';
+            }
+        });
+    }
+
+    if (closeOverlayBtn) {
+        closeOverlayBtn.addEventListener('click', function () {
+            if (overlayRegister) {
+                overlayRegister.style.display = 'none';
+            }
+        });
+    }
+
+    if (overlayRegister) {
+        overlayRegister.addEventListener('click', function (event) {
+            if (event.target === overlay) {
+                overlayRegister.style.display = 'none';
+            }
+        });
+    }
 });
+
 
 
 

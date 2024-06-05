@@ -14,9 +14,32 @@
         <a href="/#cards" class="back-btn"> <iconify-icon icon="material-symbols:arrow-circle-left-outline-rounded"
                 width="50" height="50" style="color: #fcba28"></iconify-icon></a>
         <a href="/"><img class="logo" src="../../../assets/img/logo.png" alt="logo - MicroMate"></a>
-        <a href="" class="btn-outline register">Tilmeld</a>
+        <a href="#" id="openOverlay" class="btn-outline register">Tilmeld</a>
     </header>
-
+    <div id="overlay-register" class="overlay-register">
+        <div class="overlay-content">
+            <a href="/courses/03/step4/" class="close-btn"><iconify-icon icon="material-symbols:close-rounded"
+                    width="50" height="50" style="color: #FCBA28"></iconify-icon></a>
+            <form id="form-register" class="form-register">
+                <h2>Tilmelding</h2>
+                <p>Opret dig og få ekstra fordele</p>
+                <input type="text" id="name" name="name" placeholder="Dit navn" required>
+                <input type="email" id="email" name="email" placeholder="Mailadresse" required>
+                <input type="phone" id="phone" name="phone" placeholder="Mobilnummer" required>
+                <div class="socials-login">
+                    <div class="social-login">
+                        <iconify-icon icon="mdi:facebook" width="30" height="30" style="color: #FCBA28"></iconify-icon>
+                        <p>Facebook</p>
+                    </div>
+                    <div class="social-login">
+                        <iconify-icon icon="mdi:google" width="30" height="30" style="color: #FCBA28"></iconify-icon>
+                        <p>Google</p>
+                    </div>
+                </div>
+                <a href="/courses/03/step/" class="btn-light" type="submit">Tilmeld</a>
+            </form>
+        </div>
+    </div>
     <main>
         <div class="container">
             <div class="timeline">

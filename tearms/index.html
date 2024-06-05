@@ -14,8 +14,32 @@
 <body>
     <header>
         <a href="/"><img class="logo" src="../assets/img/logo.png" alt=""></a>
-        <a href="" class="btn-outline">Tilmeld</a>
+        <a href="#" id="openOverlay" class="btn-outline">Tilmeld</a>
     </header>
+    <div id="overlay-register" class="overlay-register">
+        <div class="overlay-content">
+            <a href="/tearms/" class="close-btn"><iconify-icon icon="material-symbols:close-rounded" width="50"
+                    height="50" style="color: #FCBA28"></iconify-icon></a>
+            <form id="form-register" class="form-register">
+                <h2>Tilmelding</h2>
+                <p>Opret dig og få ekstra fordele</p>
+                <input type="text" id="name" name="name" placeholder="Dit navn" required>
+                <input type="email" id="email" name="email" placeholder="Mailadresse" required>
+                <input type="phone" id="phone" name="phone" placeholder="Mobilnummer" required>
+                <div class="socials-login">
+                    <div class="social-login">
+                        <iconify-icon icon="mdi:facebook" width="30" height="30" style="color: #FCBA28"></iconify-icon>
+                        <p>Facebook</p>
+                    </div>
+                    <div class="social-login">
+                        <iconify-icon icon="mdi:google" width="30" height="30" style="color: #FCBA28"></iconify-icon>
+                        <p>Google</p>
+                    </div>
+                </div>
+                <a href="/tearms/" class="btn-light" type="submit">Tilmeld</a>
+            </form>
+        </div>
+    </div>
     <main>
         <section class="tearms">
             <div class="tearms-content">
@@ -119,7 +143,6 @@
 
     <footer>
         <div class="footer-content">
-
             <div class="footer-info">
                 <ul>
                     <li><a href="../about/">Om os</a></li>
@@ -128,7 +151,7 @@
                 </ul>
                 <ul>
                     <li><a href="../courses/01/intro/">Begynder kodning</a></li>
-                    <li><a href="../courses/02/intro/">Start 3D art</a></li>
+                    <li><a href="../courses/02/intro/">3D art</a></li>
                     <li><a href="../courses/03/intro/">Kreativ illustration</a></li>
                 </ul>
             </div>
@@ -141,7 +164,7 @@
                 <form action="">
                     <div class="form-grp">
                         <input type="text" placeholder="Din mailadresse" class="input-newsletter" id="newsletter"
-                            name="newsletter">
+                            name="newsletter" required>
                         <a type="submit" class="btn-light" onclick="sendNewsletter()">Tilmeld</a>
                     </div>
                 </form>
@@ -156,7 +179,6 @@
 
 </body>
 <script src="../assets/js/script.js"></script>
-
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
