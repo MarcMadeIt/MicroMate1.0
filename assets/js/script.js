@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Overlay og Modal
-    var overlayFinal = document.getElementById("overlay-final", "overlay");
-    var courseFinalBtn = document.getElementById("course-final-btn", "register");
+    var overlayFinal = document.getElementById("overlay-final");
+    var courseFinalBtn = document.getElementById("course-final-btn");
     var homeLink = document.getElementById("home-link");
     var videoPlayer = document.querySelector("video");
 
@@ -153,12 +153,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
-
-
-
 // EmailJS
 function sendMail() {
     var params = {
@@ -174,7 +168,7 @@ function sendMail() {
             setTimeout(function () {
                 document.getElementById("overlay-final").style.display = 'none';
                 window.location.href = "/"; // Skifter til forsiden. 
-            }, 3000);
+            }, 2500);
         })
         .catch(function (error) {
             console.error("Failed to send email:", error);
